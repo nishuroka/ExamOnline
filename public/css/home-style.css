@@ -1,0 +1,178 @@
+/*-----------------Reset-------------*/
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+  font-family: 'Inconsolata', monospace;
+}
+h1, h2, h3{
+  font-family:  'Dosis', sans-serif;
+
+}
+a{
+	color: black;
+}
+ul li{
+  list-style: none;}
+/*colors*/
+.yellow{
+	color: #FFE400;
+}
+.orange{
+	color: #FF652F;
+}
+.grey{
+	color: #747474;
+}
+.darkgrey{
+	color: #272727;
+}
+.green{
+	color:#840000;
+}
+
+.bg-img{
+	background: url('../images/exam.jpg') center fixed;
+	background-size: cover;
+	
+}
+/*
+.bg-img:before {
+    content: " ";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #2727277d;
+    background: -webkit-radial-gradient(top center, ellipse cover, rgba(13, 87, 0, 0.27) 0%,rgba(63, 19, 19, 0.52) 100%);
+    }*/
+html{
+	min-height:100%;
+  box-shadow:inset 0 0 0 2000px #27272785;
+}
+/*-----------------------------Header---------------------*/
+.navbar img{
+	width: auto;
+  height : auto;
+  max-height: 100%;
+  max-width: 100%;
+}
+.logo{
+	height: 180px;
+	width: 100%;
+}
+.logo img{
+	max-width: 100%;
+    height: auto;
+    width: 57%;
+}
+
+.navbar{
+	padding-bottom: 78px;
+}
+.rightnav a{
+	font-weight: bold;
+	font-size: 22px;
+	-webkit-text-stroke: 1px black;
+    color: #03c607;
+}
+
+.main {
+    text-align: center;
+    padding: 0 25px;
+    text-transform: uppercase;
+}
+.main h2{
+	-webkit-text-stroke: 3px #a91e1e;
+    color: transparent;
+    font-size: 81px;
+    font-weight: bolder;
+}
+.main h2:hover{
+	color: #ab2a2a;
+	transition: 0.5s;
+}
+.main p{
+	font-size: 25px;
+    font-weight: bolder;
+}
+.button {
+	margin-top: 20px;
+    border-radius: 4px;
+    background-color: #00842f;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 24px;
+    padding: 11px 20px;
+    width: 21%;
+    /* transition: all 0.5s; */
+    /* cursor: pointer; */
+    /* margin: 5px; */
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.enter-buttons{
+  display: inline;
+  margin: 0 20px;
+}
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.next{
+  padding-top: 20px;
+}
+
+
+/*studentdash*/
+.side-nav h2{
+  padding-bottom: 5px;
+  border-bottom:1px solid;
+}
+.side-nav ul li{
+  list-style: none;
+  padding-bottom: 5px;
+}
+.exam-field{
+  margin-top: 60px;
+  padding: 5px;
+  
+}
+
+
+
+/*exam*/
+.timer {
+    width: 19%;
+    margin: 20px;
+}
+.name{
+  margin-bottom: 20px;
+}
+.question{
+  width: 67%;
+}
+.help{
+  margin-left: 10px;
+  width: 30%;
+}
+
