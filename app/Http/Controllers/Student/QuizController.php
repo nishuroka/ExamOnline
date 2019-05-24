@@ -17,5 +17,8 @@ class QuizController extends Controller
     public function rules(){
         return view ('student.rules');
     }
+    public function tips(){
+        return view ('student.tips');
+    }
     
 }

@@ -25,6 +25,7 @@ Route::post('feedback','UsersController@feedback')->name('feedback');
 
 Route::get('publishedResults','Student\DashboardController@results');
 Route::get('rules','Student\QuizController@rules');
+Route::get('tips','Student\QuizController@tips');
 
 // Get subject wise exam in result
 Route::get('gExam/{id}','Student\DashboardController@exams');
