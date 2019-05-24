@@ -1,31 +1,31 @@
 <!-- Question Field -->
-<div class="form-group col-sm-6">
+<div class="form-group col-sm-12">
     {!! Form::label('question', 'Question:') !!}
-    {!! Form::text('question', null, ['class' => 'form-control']) !!}
+    {!! Form::textarea('question', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Option1 Field -->
-<div class="form-group col-sm-6">
+<div class="form-group col-sm-12">
     {!! Form::label('option1', 'Option1:') !!}
-    {!! Form::text('option1', null, ['class' => 'form-control']) !!}
+    {!! Form::textarea('option1', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Option2 Field -->
-<div class="form-group col-sm-6">
+<div class="form-group col-sm-12">
     {!! Form::label('option2', 'Option2:') !!}
-    {!! Form::text('option2', null, ['class' => 'form-control']) !!}
+    {!! Form::textarea('option2', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Option3 Field -->
-<div class="form-group col-sm-6">
+<div class="form-group col-sm-12">
     {!! Form::label('option3', 'Option3:') !!}
-    {!! Form::text('option3', null, ['class' => 'form-control']) !!}
+    {!! Form::textarea('option3', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Option4 Field -->
-<div class="form-group col-sm-6">
+<div class="form-group col-sm-12">
     {!! Form::label('option4', 'Option4:') !!}
-    {!! Form::text('option4', null, ['class' => 'form-control']) !!}
+    {!! Form::textarea('option4', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Correct Answer Field -->
@@ -57,3 +57,13 @@
     {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
     <a href="{!! route('examquestions.index') !!}" class="btn btn-default">Cancel</a>
 </div>
+
+
+<script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
+<script>
+    CKEDITOR.replace( 'question' );
+    CKEDITOR.replace( 'option1' );
+    CKEDITOR.replace( 'option2' );
+    CKEDITOR.replace( 'option3' );
+    CKEDITOR.replace( 'option4' );
+</script>

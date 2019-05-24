@@ -52,6 +52,10 @@ Route::group(['middleware' => 'disablepreventback'], function () {
     Route::get('showPaper/{id}', 'ExamResultController@paper')->name('showpaper');
     Route::get('showResult/{id}', 'ExamResultController@result')->name('showResult');
 
+    Route::get('/changePassword','StudentProfileController@showChangePasswordForm');
+    
+
+    // student routes
     Route::get('student-login', 'Auth\StudentLoginController@showLoginForm');
     Route::get('dashboard', 'Auth\StudentLoginController@getDashboard');
     Route::post('student-login', ['as' => 'student-login', 'uses' => 'Auth\StudentLoginController@login']);

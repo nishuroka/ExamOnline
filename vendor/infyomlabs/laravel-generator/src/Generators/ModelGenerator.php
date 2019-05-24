@@ -155,6 +155,7 @@ class ModelGenerator extends BaseGenerator
             case 'datetime':
                 return 'string|\Carbon\Carbon';
             case '1t1':
+                return '\\'.$this->commandData->config->nsModel.'\\'.$relation->inputs[0].' '.camel_case($relation->inputs[0]);
             case 'mt1':
                 if (isset($relation->inputs[1])) {
                     $relationName = str_replace('_id', '', strtolower($relation->inputs[1]));
@@ -287,8 +288,8 @@ class ModelGenerator extends BaseGenerator
                 case 'boolean':
                     $rule .= "'boolean'";
                     break;
-                case 'dateTime':
-                case 'dateTimeTz':
+                case 'datetime':
+                case 'datetimetz':
                     $rule .= "'datetime'";
                     break;
                 case 'date':

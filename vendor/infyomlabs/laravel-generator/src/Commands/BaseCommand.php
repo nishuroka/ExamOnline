@@ -136,12 +136,13 @@ class BaseCommand extends Command
         }
 
         if ($runMigration) {
-            if ($this->commandData->config->forceMigrate) {
+            if ($this->commandData->getOption('forceMigrate')) {
                 $this->call('migrate');
             } elseif (!$this->commandData->getOption('fromTable') and !$this->isSkip('migration')) {
-                if ($this->commandData->getOption('jsonFromGUI')) {
+                $requestFromConsole = (php_sapi_name() == 'cli') ? true : false;
+                if ($this->commandData->getOption('jsonFromGUI') && $requestFromConsole) {
                     $this->call('migrate');
-                } elseif ($this->confirm("\nDo you want to migrate database? [y|N]", false)) {
+                } elseif ($requestFromConsole && $this->confirm("\nDo you want to migrate database? [y|N]", false)) {
                     $this->call('migrate');
                 }
             }
@@ -240,6 +241,8 @@ class BaseCommand extends Command
             ['datatables', null, InputOption::VALUE_REQUIRED, 'Override datatables settings'],
             ['views', null, InputOption::VALUE_REQUIRED, 'Specify only the views you want generated: index,create,edit,show'],
             ['relations', null, InputOption::VALUE_NONE, 'Specify if you want to pass relationships for fields'],
+            ['softDelete', null, InputOption::VALUE_NONE, 'Soft Delete Option'],
+            ['forceMigrate', null, InputOption::VALUE_NONE, 'Specify if you want to run migration or not'],
         ];
     }
 

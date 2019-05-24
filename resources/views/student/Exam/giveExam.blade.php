@@ -75,7 +75,7 @@
                     <div class="panel panel-info">
                         <div class="panel-heading">Question: {{$count}}</div>
                         <div class="panel-body">
-                            {{$exam->question}}
+                            {!! $exam->question !!}
                             <br>
                             <!-- <input type="hidden" name="subject_id" value="{{$sub_id}}"> -->
                             <input type="hidden" name="exam_id" value="{{$exam->exam_id}}">
