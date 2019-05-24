@@ -17,7 +17,8 @@
                 <form action="{{ route('feed.destroy', $feed->id)}}" method="post">
                   @csrf
                   @method('DELETE')
-                  <button class="btn btn-danger" type="submit">Delete</button>
+                  <button type="submit" class="btn btn-ghost-danger" onclick="return confirm('Are you sure?')"><i class="fa fa-trash"></i></button>
+                  
                 </form>
             </td>
 

@@ -22,7 +22,8 @@ class ExamController extends Controller
 
     public function startExam(Request $request, $id)
     {
-        $examquestion = exam::find($id)->examquestions;
+        $examquestion = exam::orderByRaw('RAND()')->first()->find($id)->examquestions;
+        //$ = $e->paginate(5);
         //$examInfo = DB::select('select * from exams where id = 1');
         $count = count($examquestion);
         //dd($users);

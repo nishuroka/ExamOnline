@@ -66,4 +66,5 @@
     CKEDITOR.replace( 'option2' );
     CKEDITOR.replace( 'option3' );
     CKEDITOR.replace( 'option4' );
+    CKEDITOR.replace('answer_review');
 </script>
