@@ -4,6 +4,7 @@
         <th>Email</th>
         <th>Phone</th>
         <th>Message</th>
+        <th>Action</th>
     </thead>
     <tbody>
     @foreach($feedback as $feed)
@@ -12,6 +13,14 @@
             <td>{!! $feed->email !!}</td>
             <td>{!! $feed->phone !!}</td>
             <td>{!! $feed->message !!}</td>
+            <td>
+                <form action="{{ route('feed.destroy', $feed->id)}}" method="post">
+                  @csrf
+                  @method('DELETE')
+                  <button class="btn btn-danger" type="submit">Delete</button>
+                </form>
+            </td>
+
         </tr>
     @endforeach
     </tbody>

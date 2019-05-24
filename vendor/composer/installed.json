@@ -1142,17 +1142,17 @@
     },
     {
         "name": "egulias/email-validator",
-        "version": "2.1.7",
-        "version_normalized": "2.1.7.0",
+        "version": "2.1.8",
+        "version_normalized": "2.1.8.0",
         "source": {
             "type": "git",
             "url": "https://github.com/egulias/EmailValidator.git",
-            "reference": "709f21f92707308cdf8f9bcfa1af4cb26586521e"
+            "reference": "c26463ff9241f27907112fbcd0c86fa670cfef98"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/709f21f92707308cdf8f9bcfa1af4cb26586521e",
-            "reference": "709f21f92707308cdf8f9bcfa1af4cb26586521e",
+            "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/c26463ff9241f27907112fbcd0c86fa670cfef98",
+            "reference": "c26463ff9241f27907112fbcd0c86fa670cfef98",
             "shasum": ""
         },
         "require": {
@@ -1167,7 +1167,7 @@
         "suggest": {
             "ext-intl": "PHP Internationalization Libraries are required to use the SpoofChecking validation"
         },
-        "time": "2018-12-04T22:38:24+00:00",
+        "time": "2019-05-16T22:02:54+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -1475,19 +1475,19 @@
         "source": {
             "type": "git",
             "url": "https://github.com/InfyOmLabs/coreui-templates.git",
-            "reference": "c3e2d1d78e4a8523b6db71318f8c35fa0dfa35eb"
+            "reference": "f719e1c136896adadea7609d1d481090ce76a356"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/InfyOmLabs/coreui-templates/zipball/c3e2d1d78e4a8523b6db71318f8c35fa0dfa35eb",
-            "reference": "c3e2d1d78e4a8523b6db71318f8c35fa0dfa35eb",
+            "url": "https://api.github.com/repos/InfyOmLabs/coreui-templates/zipball/f719e1c136896adadea7609d1d481090ce76a356",
+            "reference": "f719e1c136896adadea7609d1d481090ce76a356",
             "shasum": ""
         },
         "require": {
             "illuminate/support": "~5.0",
             "php": ">=5.5.9"
         },
-        "time": "2019-04-14T05:59:38+00:00",
+        "time": "2019-05-21T03:55:06+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -1522,12 +1522,12 @@
         "source": {
             "type": "git",
             "url": "https://github.com/InfyOmLabs/laravel-generator.git",
-            "reference": "22cd4fd5c50715c452d9555ffbbd597a5f58a119"
+            "reference": "dc4b60b550c10f5c7a4860d6dd3786a4243aedb9"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/InfyOmLabs/laravel-generator/zipball/22cd4fd5c50715c452d9555ffbbd597a5f58a119",
-            "reference": "22cd4fd5c50715c452d9555ffbbd597a5f58a119",
+            "url": "https://api.github.com/repos/InfyOmLabs/laravel-generator/zipball/dc4b60b550c10f5c7a4860d6dd3786a4243aedb9",
+            "reference": "dc4b60b550c10f5c7a4860d6dd3786a4243aedb9",
             "shasum": ""
         },
         "require": {
@@ -1540,7 +1540,7 @@
             "mockery/mockery": "~0.9",
             "phpunit/phpunit": "~5.0"
         },
-        "time": "2019-05-20T06:27:46+00:00",
+        "time": "2019-05-21T03:58:28+00:00",
         "type": "library",
         "extra": {
             "laravel": {
@@ -1840,17 +1840,17 @@
     },
     {
         "name": "laravel/framework",
-        "version": "v5.8.17",
-        "version_normalized": "5.8.17.0",
+        "version": "v5.8.18",
+        "version_normalized": "5.8.18.0",
         "source": {
             "type": "git",
             "url": "https://github.com/laravel/framework.git",
-            "reference": "33c04dd2a431adeeb49926a4f2b20590cc033ca2"
+            "reference": "9f571be04435883dab6f23ecfadb204273b7f527"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/laravel/framework/zipball/33c04dd2a431adeeb49926a4f2b20590cc033ca2",
-            "reference": "33c04dd2a431adeeb49926a4f2b20590cc033ca2",
+            "url": "https://api.github.com/repos/laravel/framework/zipball/9f571be04435883dab6f23ecfadb204273b7f527",
+            "reference": "9f571be04435883dab6f23ecfadb204273b7f527",
             "shasum": ""
         },
         "require": {
@@ -1953,7 +1953,7 @@
             "symfony/psr-http-message-bridge": "Required to use PSR-7 bridging features (^1.1).",
             "wildbit/swiftmailer-postmark": "Required to use Postmark mail driver (^3.0)."
         },
-        "time": "2019-05-14T16:02:41+00:00",
+        "time": "2019-05-21T16:40:34+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -2124,17 +2124,17 @@
     },
     {
         "name": "league/flysystem",
-        "version": "1.0.51",
-        "version_normalized": "1.0.51.0",
+        "version": "1.0.52",
+        "version_normalized": "1.0.52.0",
         "source": {
             "type": "git",
             "url": "https://github.com/thephpleague/flysystem.git",
-            "reference": "755ba7bf3fb9031e6581d091db84d78275874396"
+            "reference": "c5a5097156387970e6f0ccfcdf03f752856f3391"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/755ba7bf3fb9031e6581d091db84d78275874396",
-            "reference": "755ba7bf3fb9031e6581d091db84d78275874396",
+            "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/c5a5097156387970e6f0ccfcdf03f752856f3391",
+            "reference": "c5a5097156387970e6f0ccfcdf03f752856f3391",
             "shasum": ""
         },
         "require": {
@@ -2164,7 +2164,7 @@
             "spatie/flysystem-dropbox": "Allows you to use Dropbox storage",
             "srmklive/flysystem-dropbox-v2": "Allows you to use Dropbox storage for PHP 5 applications"
         },
-        "time": "2019-03-30T13:22:34+00:00",
+        "time": "2019-05-20T20:21:14+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -4529,20 +4529,20 @@
     },
     {
         "name": "swagger-api/swagger-ui",
-        "version": "v3.22.1",
-        "version_normalized": "3.22.1.0",
+        "version": "v3.22.2",
+        "version_normalized": "3.22.2.0",
         "source": {
             "type": "git",
             "url": "https://github.com/swagger-api/swagger-ui.git",
-            "reference": "c38bf85e34ee46b2ad399b25c4c73668dc0d7e1d"
+            "reference": "54c045fd472a740e7ae3d26148708455fa6358b4"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/swagger-api/swagger-ui/zipball/c38bf85e34ee46b2ad399b25c4c73668dc0d7e1d",
-            "reference": "c38bf85e34ee46b2ad399b25c4c73668dc0d7e1d",
+            "url": "https://api.github.com/repos/swagger-api/swagger-ui/zipball/54c045fd472a740e7ae3d26148708455fa6358b4",
+            "reference": "54c045fd472a740e7ae3d26148708455fa6358b4",
             "shasum": ""
         },
-        "time": "2019-04-13T01:40:36+00:00",
+        "time": "2019-05-22T01:36:53+00:00",
         "type": "library",
         "installation-source": "dist",
         "notification-url": "https://packagist.org/downloads/",

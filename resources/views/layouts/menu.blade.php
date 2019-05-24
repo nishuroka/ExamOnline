@@ -31,3 +31,5 @@
 <li class="nav-item {{ Request::is('feed') ? 'active' : '' }}">
     <a class="nav-link" href="{!! url('feed') !!}"><i class="nav-icon fas fa-envelope"></i><span>Feedback</span></a>
 </li>
+
+

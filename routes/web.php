@@ -21,6 +21,7 @@ Route::get('/index', function () {
 Route::get('index','UsersController@index')->name('index');
 
 Route::post('feedback','UsersController@feedback')->name('feedback');
+// Route::get('feedback','UsersController@feedback')->name('feedback');
 
 Route::get('publishedResults','Student\DashboardController@results');
 Route::get('rules','Student\QuizController@rules');
@@ -88,3 +89,7 @@ Route::group(['middleware' => 'disablepreventback'], function () {
 
 // Auth::routes();
 // Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+

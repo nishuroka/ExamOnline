@@ -83,6 +83,10 @@ class FeedbackController extends Controller
      */
     public function destroy($id)
     {
-        
+     $feed = Feedback::find($id);
+     $feed->delete();
+
+    //  return redirect('/shares')->with('success', 'Stock has been deleted Successfully');
+    return redirect()->back();
     }
 }
