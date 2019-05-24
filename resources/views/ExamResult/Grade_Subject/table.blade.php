@@ -7,15 +7,15 @@
         <th colspan="3">Action</th>
     </thead>
     <tbody>
-        @forelse($exam as $exm)
+        @forelse($grade as $exm)
         <tr>
-            <td>{!! $subject->id !!}</td>
-            <td>{!! $subject->sub_code !!}</td>
-            <!-- <td><a href="{{url('showExam',$subject->id)}}"><i class="fa fa-folder-open">&nbsp;{{$subject->exams->count()}}</i></a></td> -->
-            <td>{!! $subject->created_at !!}</td>
+            <td>{!! $exm->id !!}</td>
+            <td>{!! $exm->sub_code !!}</td>
+            <td><a href="{{url('showExam',$exm->id)}}"><i class="fa fa-folder-open">&nbsp;{{$exm->exams->count()}}</i></a></td>
+            <td>{!! $exm->created_at !!}</td>
             <td>
                 <div class='btn-group'>
-                    <a href="{!! url('examresults', [$subject->id]) !!}" class='btn btn-ghost-success'><i class="fa fa-eye"></i></a>
+                    <a href="{!! url('examresults', [$exm->id]) !!}" class='btn btn-ghost-success'><i class="fa fa-eye"></i></a>
                 </div>
                 {!! Form::close() !!}
             </td>
