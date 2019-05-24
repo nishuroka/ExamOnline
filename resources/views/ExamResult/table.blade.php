@@ -15,7 +15,7 @@
             <td>{!! $grade->created_at !!}</td>
             <td>
                 <div class='btn-group'>
-                    <a href="{!! route('showGrade', [$grade->id]) !!}" class='btn btn-ghost-success'><i class="fa fa-eye"></i></a>
+                    <a href="{!! route('showGrade', [$grade->id]) !!}" class='btn btn-ghost-success'><i class="fas fa-eye"></i></a>
                 </div>
                 {!! Form::close() !!}
             </td>

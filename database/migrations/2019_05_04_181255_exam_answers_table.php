@@ -19,6 +19,7 @@ class ExamAnswersTable extends Migration
             $table->tinyInteger('exam_id');
             $table->string('chosenValue');
             $table->string('answer');
+            $table->integer('status')->nullable();
             $table->integer('user_id')->unsigned();
             $table->timestamps();
             $table->rememberToken();

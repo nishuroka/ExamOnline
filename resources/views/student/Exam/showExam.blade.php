@@ -48,9 +48,10 @@ Student Dashboard
         var w = document.getElementById('ite').value;
         console.log(w);
         var q = document.getElementById("Sid" + document.getElementById('ite').value ).value;
+    @foreach($exam as $subs)
         
         var win = window.open("{{route('giveExam',$subs->id)}}",'1366002941508','width=500,height=200,left=375,top=330');
-
+@endforeach
         setTimeout(function () { win.close();}, 3000);
     }
 </script>

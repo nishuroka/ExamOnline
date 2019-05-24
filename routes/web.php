@@ -32,6 +32,9 @@ Route::get('gExam/{id}','Student\DashboardController@exams');
 
 Route::get('exammmQuestion/{id}','Student\DashboardController@examQuestion');
 
+// To publish result
+Route::post('publish-result/{id}','ExamResultController@publish')->name('publish-result');
+
 
 
 Route::group(['middleware' => 'disablepreventback'], function () {

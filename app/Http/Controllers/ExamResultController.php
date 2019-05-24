@@ -8,6 +8,8 @@ use App\Models\subject;
 use App\Models\exam;
 use App\Models\examquestion;
 use App\ExamAnswer;
+use Illuminate\Support\Facades\DB;
+
 
 class ExamResultController extends Controller
 {
@@ -54,38 +56,45 @@ class ExamResultController extends Controller
 
             return redirect(route('examresults'));
         }
-        return view('ExamResult/Grade_Subject/Subject_Exam/Exam_Paper.index', compact('exam','questionanswer','examquestion'));
+        return view('ExamResult/Grade_Subject/Subject_Exam/Exam_Paper.index', compact('exam', 'questionanswer', 'examquestion'));
     }
 
     public function result($id)
     {
-       
+
         // $data['exam'] = exam::with(array('examanswers'=>function($query){
         //         $query->with('student')->get();
         // }))->findOrFail($id);
         // dd($data['exam']->toArray());
-            
+
         //  $exam = ExamAnswer::where('exam_id',$id)->select('user_id')->groupBy('user_id')->get();
         //  $exam = Exam::findOrFail($id)->examanswers;
-            // $correctans = 0;
-            // $wrongans = 0;
-        
-// dd($exam);
-            $exam = ExamAnswer::where('exam_id',$id)->selectRaw('user_id, SUM(marks) as Total')->groupBy('user_id')->get();
+        // $correctans = 0;
+        // $wrongans = 0;
 
-        return view('ExamResult/Grade_Subject/Subject_Exam/Exam_Result.index',compact('exam'));
-      
+        // dd($exam);
+        $exam = ExamAnswer::where('exam_id', $id)->selectRaw('user_id, SUM(marks) as Total')->groupBy('user_id')->get();
+
+        return view('ExamResult/Grade_Subject/Subject_Exam/Exam_Result.index', compact('exam'));
     }
-    
+
 
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function publish(Request $request, $id)
     {
-        //
+        // $result = [
+        //     'status' => $request->status,
+        // ];
+        // $publish = ExamAnswer::update($request->status);
+        DB::table('exam_answers')
+            ->where("exam_answers.exam_id", '=',  $id)
+            ->update(['exam_answers.status' => 1]);
+        // ExamAnswer::create($result);
+        return redirect()->back();
     }
 
     /**
