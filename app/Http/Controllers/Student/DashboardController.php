@@ -38,20 +38,17 @@ class DashboardController extends Controller
        
     }
 
-    public function examQuestion($id){
-        // dd('Hi');
+    public function examQuestion(Request $request, $id){
         $user = Auth::guard('student')->user()->id;
-        // $exam = examquestion::where('exam_id',$id)->where('user_id',$user)->selectRaw('user_id, SUM(marks) as Total')->groupBy('user_id')->get();        
-        $exam = ExamAnswer::with('examquestion')->where('exam_id',$id)->where('user_id',$user)->where('status',1)->get();        
-        $answerReview = examquestion::where('id',$id)->first();
-        // dd($answerReview->toarray());
-        // if (empty($subject)) {
-        //     Flash::error('Exam not found');
+        $exam = ExamAnswer::where('exam_id',$id)->where('user_id',$user)->where('status',1)->with('examquestion')->get();
+        $examquestionss = ExamAnswer::where('exam_id',$id)->where('user_id',$user)->where('status',1)->pluck('question_id');
+        // dd($examquestionss);
+         
+        $examquestion = examquestion::where('id',$examquestionss)->where('exam_id',$id)->get();  
+        // dd($examquestion->toarray());
 
-        //     return redirect(route('dashboard'));
-        // }
-        // dd("success");
-        return view('student/PublishedResults/ExamAnswers/index',compact('exam','answerReview'));
+       
+        return view('student/PublishedResults/ExamAnswers/index',compact('exam','examquestion'));
        
     }
 }

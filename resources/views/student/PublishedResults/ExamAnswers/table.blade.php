@@ -12,9 +12,14 @@
         <tr>
             <td>{!! $subject->id !!}</td>
             <td>{!! $subject->question_id !!}</td>
+            @forelse($examquestion as $question)
+            <td>{!! $question->question !!}</td>
+            <td>{!! $question->answer_review !!}</td>
+            @empty
+            <p>No</p>
+            @endforelse
             <td>{!! $subject->marks !!}</td>
             <td>{!! $subject->answer !!}</td>
-            <td>{!! $answerReview->answer_review !!}</td>
             <td>
                 <div class='btn-group'>
                     <a href="{!! url('examresults', [$subject->id]) !!}" class='btn btn-ghost-success'><i class="fa fa-eye"></i></a>
