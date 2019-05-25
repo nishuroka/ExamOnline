@@ -31,17 +31,21 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <div class="modal-body">
-                        <p>Are you sure about publishing the result?</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-                        <form action="{{route('publish-result',$exm->id)}}" method="post">
+                    <form action="{{route('publish-result',$exm->id)}}" method="post">
                         @csrf
-                        <input type="hidden" name="status" value="1">
-                            <button type="submit" class="btn btn-primary">Yes</button>
-                        </form>
-                    </div>
+                        <div class="modal-body">
+                            <p>You are going to publish the result of {!! $exm->exam_name !!}</p>
+                            <select class="browser-default custom-select" name="status">
+                                <option selected>Status</option>
+                                <option value="1">Active</option>
+                                <option value="0">Inactive</option>
+                            </select>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Publish</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
