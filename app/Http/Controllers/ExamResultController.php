@@ -92,7 +92,9 @@ class ExamResultController extends Controller
         // $publish = ExamAnswer::update($request->status);
         DB::table('exam_answers')
             ->where("exam_answers.exam_id", '=',  $id)
-            ->update(['exam_answers.status' => 1]);
+            ->update(['exam_answers.status' => $request->status]);
+
+            // dd($request->status);
         // ExamAnswer::create($result);
         return redirect()->back();
     }

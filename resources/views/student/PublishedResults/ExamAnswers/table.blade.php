@@ -23,7 +23,7 @@
             </td>
         </tr>
         @empty
-        <p>No Subject Added</p>
+        <p>Result hasn't been published yet.</p>
         @endforelse
     </tbody>
 </table>

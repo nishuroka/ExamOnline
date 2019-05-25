@@ -9,7 +9,7 @@
         <th>Exam Duration</th>
         <th>Total Marks</th>
         <th>Added At</th>
-        <th colspan="3">Action</th>
+        <th colspan="3">Publish</th>
     </thead>
     <tbody>
         @forelse($subject->exams as $exam)
@@ -26,11 +26,39 @@
             <td>{!! $exam->created_at !!}</td>
             <td>
                 <div class='btn-group'>
-                    <a href="{!! url('examresults', [$exam->id]) !!}" class='btn btn-ghost-success'><i class="fa fa-eye"></i></a>
+                    <a data-toggle="modal" data-target="#publishModal{!! $exam->id !!}" class='btn btn-ghost-success'><i class="fas fa-upload"></i></a>
                 </div>
                 {!! Form::close() !!}
             </td>
         </tr>
+        <!-- Modal -->
+        <div class="modal fade" id="publishModal{!! $exam->id !!}" tabindex="-1" role="dialog" aria-labelledby="publishModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="publishModalLabel">Publish Result</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <form action="{{route('publish-result',$exam->id)}}" method="post">
+                        @csrf
+                        <div class="modal-body">
+                            <p>You are going to publish the result of {!! $exam->exam_name !!}</p>
+                            <select class="browser-default custom-select" name="status">
+                                <option selected>Status</option>
+                                <option value="1">Active</option>
+                                <option value="0">Inactive</option>
+                            </select>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Publish</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
         @empty
         <p>No Exam Added</p>
         @endforelse

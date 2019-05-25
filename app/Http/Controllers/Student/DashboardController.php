@@ -42,7 +42,7 @@ class DashboardController extends Controller
         // dd('Hi');
         $user = Auth::guard('student')->user()->id;
         // $exam = examquestion::where('exam_id',$id)->where('user_id',$user)->selectRaw('user_id, SUM(marks) as Total')->groupBy('user_id')->get();        
-        $exam = ExamAnswer::with('examquestion')->where('exam_id',$id)->where('user_id',$user)->get();        
+        $exam = ExamAnswer::with('examquestion')->where('exam_id',$id)->where('user_id',$user)->where('status',1)->get();        
         $answerReview = examquestion::where('id',$id)->first();
         // dd($answerReview->toarray());
         // if (empty($subject)) {
