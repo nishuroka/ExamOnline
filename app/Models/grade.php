@@ -42,7 +42,7 @@ class grade extends Model
      * @var array
      */
     public static $rules = [
-        
+        'class'=>'required'
     ];
 
     public function subjects(){

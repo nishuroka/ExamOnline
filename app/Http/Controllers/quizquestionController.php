@@ -7,6 +7,7 @@ use App\Http\Requests\UpdatequizquestionRequest;
 use App\Repositories\quizquestionRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
+use App\Models\subject;
 use Flash;
 use Response;
 
@@ -42,7 +43,8 @@ class quizquestionController extends AppBaseController
      */
     public function create()
     {
-        return view('quizquestions.create');
+        $sub = subject::all()->sortBy('subject')->pluck('sub_code','id');
+        return view('quizquestions.create', compact('sub'));
     }
 
     /**
@@ -93,6 +95,7 @@ class quizquestionController extends AppBaseController
     public function edit($id)
     {
         $quizquestion = $this->quizquestionRepository->find($id);
+        $sub = subject::all()->sortBy('subject')->pluck('sub_code','id');
 
         if (empty($quizquestion)) {
             Flash::error('Quizquestion not found');
@@ -100,7 +103,7 @@ class quizquestionController extends AppBaseController
             return redirect(route('quizquestions.index'));
         }
 
-        return view('quizquestions.edit')->with('quizquestion', $quizquestion);
+        return view('quizquestions.edit', compact('sub'))->with('quizquestion', $quizquestion);
     }
 
     /**

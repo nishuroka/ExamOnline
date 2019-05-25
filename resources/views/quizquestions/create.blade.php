@@ -14,7 +14,7 @@
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-header">
-                                <i class="fa fa-plus-square-o fa-lg"></i>
+                                <i class="fa fa-plus-square fa-lg"></i>
                                 <strong>Create Quizquestion</strong>
                             </div>
                             <div class="card-body">

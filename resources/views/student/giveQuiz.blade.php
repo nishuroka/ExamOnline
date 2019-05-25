@@ -49,7 +49,7 @@ Quiz Practise
       </div><!--mt-3-->
       <div id="rev{{$q}}" style="display:none;">
         <h4>Answer Review:</h4>
-        <p> {{$qui->answer_review}}
+        <p> {!! $qui->answer_review !!}
       </div>
     </div>
   </div>

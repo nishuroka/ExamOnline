@@ -55,14 +55,7 @@
                                     <h4>
                                         <i class="far fa-edit mr-3"></i>Exam Rules</h4>
                                 </a>
-                                <a href="#" class="dropdown-item mt-3">
-                                    <h4>
-                                        <i class="far fa-question-circle mr-3"></i>Faq</h4>
-                                </a>
-                                <a href="#" class="dropdown-item mt-3">
-                                    <h4>
-                                        <i class="far fa-thumbs-up mr-3"></i>Support</h4>
-                                </a>
+                                
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="{!! url('/logout') !!}" onclick="event.preventDefault(); 
                                     document.getElementById('logout-form').submit();">Logout</a>

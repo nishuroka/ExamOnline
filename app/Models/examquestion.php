@@ -67,7 +67,13 @@ class examquestion extends Model
      * @var array
      */
     public static $rules = [
-        
+        'question' => 'required|min:3',
+        'option1' => 'required',
+        'option2' => 'required',
+        'option3' => 'required',
+        'option4' => 'required',
+        'answer_review' => 'required',
+        'marks' => 'required'
     ];
 
     public function examanswers(){

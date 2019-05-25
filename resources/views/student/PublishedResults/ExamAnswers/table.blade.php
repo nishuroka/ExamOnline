@@ -2,10 +2,11 @@
     <thead>
         <th>ID</th>
         <th>Question Number</th>
+        <th>Question</th>
         <th>Marks</th>
         <th>Answer</th>
         <th>Review</th>
-        <th colspan="3">Action</th>
+        
     </thead>
     <tbody>
         @forelse($exam as $subject)
@@ -20,12 +21,7 @@
             @endforelse
             <td>{!! $subject->marks !!}</td>
             <td>{!! $subject->answer !!}</td>
-            <td>
-                <div class='btn-group'>
-                    <a href="{!! url('examresults', [$subject->id]) !!}" class='btn btn-ghost-success'><i class="fa fa-eye"></i></a>
-                </div>
-                {!! Form::close() !!}
-            </td>
+            
         </tr>
         @empty
         <p>Result hasn't been published yet.</p>

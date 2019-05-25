@@ -37,7 +37,7 @@ Route::post('publish-result/{id}','ExamResultController@publish')->name('publish
 
 
 
-Route::group(['middleware' => 'disablepreventback'], function () {
+Route::group(['middleware' => 'disablepreventback'] , function () {
     Auth::routes();
     Route::get('/home', 'HomeController@index');
 

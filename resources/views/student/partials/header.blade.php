@@ -38,33 +38,7 @@
                         </li>
                     </ul>
                 </li> -->
-                <li>
-                    <a href="">
-                        <i class="fas fa-chart-pie"></i>
-                        Courses
-                    </a>
-                </li>
-                <li>
-                    <a href="grids.html">
-                        <i class="fas fa-th"></i>
-                        Exams
-                    </a>
-                </li>
-                <li>
-                    <a href="#" data-toggle="collapse" aria-expanded="false">
-                        <i class="far fa-file"></i>
-                        MCQs
-                        <i class="fas fa-angle-down fa-pull-right"></i>
-                    </a>
-                    
-                </li>
                 
-                <li>
-                    <a href="widgets.html">
-                        <i class="far  fa-window-restore"></i>
-                        Quizes
-                    </a>
-                </li>
                 <li>
                     <a href="rules">
                         <i class="far fas fa-pencil-ruler"></i>
@@ -78,22 +52,14 @@
                         Result
                     </a>
                 </li>
-                
                 <li>
-                    <a href="#pageSubmenu3" data-toggle="collapse" aria-expanded="false">
-                        <i class="fas fa-users"></i>
-                        User
-                        <i class="fas fa-angle-down fa-pull-right"></i>
+                    <a href="{{url('tips')}}">
+                        <i class="far fas fa-book"></i>
+                        Tips
                     </a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu3">
-                        <li>
-                            <a href="">Profile</a>
-                        </li>
-                        <li>
-                            <a href="forgot.html">Forgot password</a>
-                        </li>
-                    </ul>
                 </li>
+                
+               
                
             </ul>
         </nav>

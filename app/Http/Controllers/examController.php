@@ -75,7 +75,7 @@ class examController extends AppBaseController
     public function show($id)
     {
         $exam = $this->examRepository->find($id);
-
+    
         if (empty($exam)) {
             Flash::error('Exam not found');
 
@@ -95,7 +95,7 @@ class examController extends AppBaseController
     public function edit($id)
     {
         $exam = $this->examRepository->find($id);
-        $sub = subject::all()->sortBy('subject')->pluck('subject_code','id');
+        $sub = subject::all()->sortBy('subject')->pluck('sub_code','id');
 
         if (empty($exam)) {
             Flash::error('Exam not found');

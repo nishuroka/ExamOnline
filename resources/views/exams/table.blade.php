@@ -5,7 +5,6 @@
         <th>Exam Code</th>
         <th>Exam Name</th>
         <th>Exam Date</th>
-        <th>Start Time</th>
         <th>Exam Duration</th>
         <th>Total Marks</th>
         <th colspan="3">Action</th>
@@ -18,7 +17,6 @@
             <td>{!! $exam->exam_code !!}</td>
             <td>{!! $exam->exam_name !!}</td>
             <td>{!! $exam->exam_date !!}</td>
-            <td>{!! $exam->start_time !!}</td>
             <td>{!! $exam->exam_duration !!}</td>
             <td>{!! $exam->total_marks !!}</td>
             <td>

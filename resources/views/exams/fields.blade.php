@@ -42,25 +42,6 @@
        </script>
 @endsection
 
-<!-- Start Time Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('start_time', 'Start Time:') !!}
-    {!! Form::text('start_time', null, ['class' => 'form-control','id'=>'start_time']) !!}
-</div>
-
-@section('scripts')
-   <script type="text/javascript">
-           $('#start_time').datetimepicker({
-               format: 'YYYY-MM-DD HH:mm:ss',
-               useCurrent: true,
-               icons: {
-                   up: "icon-arrow-up-circle icons font-2xl",
-                   down: "icon-arrow-down-circle icons font-2xl"
-               },
-               sideBySide: true
-           })
-       </script>
-@endsection
 
 <!-- Exam Duration Field -->
 <div class="form-group col-sm-6">

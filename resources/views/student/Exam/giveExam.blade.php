@@ -29,6 +29,7 @@
 </head>
 
 <body>
+@if (date("Y-m-d H:i:s",strtotime($examInfo->exam_date)) <= date("Y-m-d H:i:s"))
     <div class="container">
 
         <div class="timer pull-right">
@@ -66,7 +67,7 @@
             <!--help-->
             <!-- Form open -->
 
-            <form action="{{route('submitExam')}}" method="POST">
+            <form action="{{route('submitExam')}}" method="POST" id="myExam">
                 @csrf
                 <?php $count = 0; ?>
                 @foreach($examquestion as $key => $exam)
@@ -86,18 +87,18 @@
                             <input type="hidden" name="user_id" value="{{Auth::guard('student')->user()->id}}">
 
                             <label class="radio-inline">
-                                <input type="radio" name="chosenValue[{{$count}}]" value="option1">{{$exam->option1}}
+                                <input type="radio" name="chosenValue[{{$count}}]" value="option1">{!! $exam->option1 !!}
                             </label><br>
 
                             <!-- <input type="hidden" name="exam_id" value="{{$exam->id}}"> -->
                             <label class="radio-inline">
-                                <input type="radio" name="chosenValue[{{$count}}]" value="option2">{{$exam->option2}}
+                                <input type="radio" name="chosenValue[{{$count}}]" value="option2">{!! $exam->option2 !!}
                             </label><br>
                             <label class="radio-inline">
-                                <input type="radio" name="chosenValue[{{$count}}]" value="option3">{{$exam->option3}}
+                                <input type="radio" name="chosenValue[{{$count}}]" value="option3">{!! $exam->option3 !!}
                             </label><br>
                             <label class="radio-inline">
-                                <input type="radio" name="chosenValue[{{$count}}]" value="option4">{{$exam->option4}}
+                                <input type="radio" name="chosenValue[{{$count}}]" value="option4">{!! $exam->option4 !!}
                             </label>
 
                         </div>
@@ -137,7 +138,8 @@
                     display.textContent = minutes + ":" + seconds;
 
                     if (--timer < 0) {
-                        document.getElementById("duration-min").innerHTML = "EXPIRED";
+                        clearInterval(timer);
+                        document.getElementById('myExam').submit();
                     }
                 }, 1000);
             }
@@ -148,7 +150,22 @@
                     display = document.querySelector('#duration-min');
                 startTimer(fiveMinutes, display);
             };
+
+           
+            function disableF5(e) { if ((e.which || e.keyCode) == 116 || (e.which || e.keyCode) == 82) e.preventDefault(); };
+
+            $(document).ready(function(){
+                $(document).on("keydown", disableF5);
+            });
+
         </script>
+
+            @else{
+                <p style="text-align:center;">Your Exam doesnt start till {{$examInfo->exam_date}}</p>
+            }
+
+@endif 
+
 </body>
 
 </html>

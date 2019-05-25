@@ -26,14 +26,18 @@ Student Dashboard
                 <p class="paragraph-agileits text-white" style="display:inline;">{{$subs->total_marks}} </p><br>
         </div>
         <div class="s-r">
+        @if (date("Y-m-d",strtotime($subs['exam_date'])) == date("Y-m-d"))
             <h6>
             <a href="{{route('giveExam',$subs->id)}}" target="_blank">
          
-
+           
             <!-- <button class="btn btn-danger" value="{{$subs->id}}" id="Sid{{$q}}"  onclick="exam()">Start Exam</button> -->
                 <button class="btn btn-danger" >Start Exam</button>
+
+
             </a>
             </h6>
+            @endif
             <!-- <p></p> -->
         </div>
     </div>

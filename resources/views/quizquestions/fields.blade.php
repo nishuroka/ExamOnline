@@ -43,7 +43,7 @@
 <!-- Subject Id Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('subject_id', 'Subject Id:') !!}
-    {!! Form::text('subject_id', null, ['class' => 'form-control']) !!}
+    {!! Form::select('subject_id',$sub, null, array('class' => 'form-control')) !!}
 </div>
 
 <!-- Submit Field -->
@@ -51,3 +51,8 @@
     {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
     <a href="{!! route('quizquestions.index') !!}" class="btn btn-default">Cancel</a>
 </div>
+
+<script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
+<script>
+    CKEDITOR.replace('answer_review');
+</script>

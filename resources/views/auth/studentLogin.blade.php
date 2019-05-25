@@ -311,7 +311,7 @@
           <div class="button-container">
             <button type="submit"><span>Go</span></button>
           </div>
-          <div class="footer"><a href="{{ route('password.request') }}">Forgot your password?</a></div>
+          
         </form>
       </div>
       <div class="card alt">
