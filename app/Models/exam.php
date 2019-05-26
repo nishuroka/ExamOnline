@@ -66,7 +66,7 @@ class exam extends Model
      * @var array
      */
     public static $rules = [
-        'exam_code'=>'required|min:3',
+        'exam_code'=>'required|min:1',
         'exam_name'=>'required|min:5|max:100',
         'exam_date'=>'required',
         'exam_duration'=>'required',
