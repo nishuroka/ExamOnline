@@ -2,7 +2,7 @@
     <thead>
         <th>ID</th>
         <th>Question Number</th>
-        <th>Question</th>
+        <!-- <th>Question</th> -->
         <th>Marks</th>
         <th>Answer</th>
         <th>Review</th>
@@ -13,14 +13,11 @@
         <tr>
             <td>{!! $subject->id !!}</td>
             <td>{!! $subject->question_id !!}</td>
-            @forelse($examquestion as $question)
-            <td>{!! $question->question !!}</td>
-            <td>{!! $question->answer_review !!}</td>
-            @empty
-            <p>No</p>
-            @endforelse
+          
             <td>{!! $subject->marks !!}</td>
             <td>{!! $subject->answer !!}</td>
+            <td>{!! $subject->answer_review !!}</td>
+
             
         </tr>
         @empty

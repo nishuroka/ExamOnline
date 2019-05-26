@@ -14,6 +14,7 @@ class ExamAnswer extends Model
         'answer',
         'chosenValue',
         'user_id',
+        'answer_review',
         'status',
     ];
 

@@ -18,80 +18,8 @@ Student Dashboard
           </a>
         </div>
       </div>
-      <div class="container-flud">
-        <div class="followers row">
-          <div class="f-left col">
-            <a href="#">
-              <i class="far fa-comments"></i>
-            </a>
-          </div>
-          <div class="f-left col border-left border-right">
-            <a href="#">
-              <i class="fas fa-eye"></i>
-            </a>
-          </div>
-          <div class="f-left col">
-            <a href="#">
-              <i class="far fa-heart"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-      <ul class="prof-widgt-content">
-        <li class="menu">
-          <ul>
-            <li class="button">
-              <a href="#">
-                <i class="fas fa-envelope"></i> Messages
-                <span>13</span>
-              </a>
-            </li>
-            <li class="dropdown">
-              <ul class="icon-navigation">
-                <li>
-                  <a href="#">Inbox
-                    <span class="float-right">[09]</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">Outbox
-                    <span class="float-right">[01]</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">Sent messages
-                    <span class="float-right">[03]</span>
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li class="menu">
-          <ul>
-            <li class="button">
-              <a href="#">
-                <i class="fas fa-user"></i> Profile</a>
-            </li>
-            <li class="dropdown">
-              <ul class="icon-navigation">
-                <!-- <li>
-                  <a href="#">Change your pic</a>
-                </li> -->
-                <li>
-                  <a href="#">Change your username</a>
-                </li>
-                <li>
-                  <a href="#">About us</a>
-                </li>
-                <li>
-                  <a href="#">Contact me</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-      </ul>
+     
+     
     </div>
     <!--// Profile -->
     <!-- Stats -->

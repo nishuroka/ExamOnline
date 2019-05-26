@@ -48,7 +48,7 @@ class subject extends Model
      * @var array
      */
     public static $rules = [
-        'sub_code'=>'required|min:3|max:10|unique:subjects',
+        'sub_code'=>'required|min:3|max:10',
         'subject'=>'required|min:5|max:50',
     ];
 

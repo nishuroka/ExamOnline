@@ -5,9 +5,7 @@
 | Web Routes
 |--------------------------------------------------------------------------
 |
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
+| Routes 
 |
 */
 
@@ -74,7 +72,7 @@ Route::group(['middleware' => 'disablepreventback'] , function () {
     //for giving exam
     Route::get('giveExam/{id?}','Student\ExamController@startExam')->name('giveExam');
     
-    //For submitting exa,
+    //For submitting exam
     Route::post('submitExam','Student\ExamController@send')->name('submitExam');
     
     

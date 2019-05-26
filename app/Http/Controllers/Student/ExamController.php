@@ -91,14 +91,13 @@ class ExamController extends Controller
             $answers[] = [
                 'chosenValue' => $request->chosenValue[$key],
                 'question_id' => $request->question_id[$key],
+                'answer_review'=> $request->answer_review,
                 'user_id' => $request->user_id,
                 'answer' => $correct_ans,
                 'exam_id' => $request->exam_id,
                 'marks'=> $marks,
+                
             ];
-
-
-                //if()
 
             }
         }

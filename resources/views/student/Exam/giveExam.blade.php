@@ -29,7 +29,6 @@
 </head>
 
 <body>
-@if (date("Y-m-d H:i:s",strtotime($examInfo->exam_date)) <= date("Y-m-d H:i:s"))
     <div class="container">
 
         <div class="timer pull-right">
@@ -84,6 +83,8 @@
                             <input type="hidden" name="marks" value="{{$exam->marks}}">
                             <div class="clearfix"></div>
                             <input type="hidden" name="question_id[{{$count}}]" value="{{$exam->id}}">
+                            <input type="hidden" name="answer_review" value="{{$exam->answer_review}}">
+                            
                             <input type="hidden" name="user_id" value="{{Auth::guard('student')->user()->id}}">
 
                             <label class="radio-inline">
@@ -160,11 +161,7 @@
 
         </script>
 
-            @else{
-                <p style="text-align:center;">Your Exam doesnt start till {{$examInfo->exam_date}}</p>
-            }
-
-@endif 
+           
 
 </body>
 

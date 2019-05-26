@@ -2,7 +2,7 @@
 <nav id="sidebar">
             <div class="sidebar-header">
                 <h1>
-                    <a href="index.html">ExamTech</a>
+                    <a href="{{url('dashboard')}}">ExamTech</a>
                 </h1>
                 <span>ET</span>
             </div>
