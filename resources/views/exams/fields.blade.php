@@ -36,7 +36,7 @@
 
 <div class="form-group col-sm-6">
     <label for="status">Status</label>
-    <select name="status" class="col-md-12">
+    <select name="status" class="col-md-12 form-control">
         <option value="0">Inactive</option>
         <option value="1">Active</option>
     </select>

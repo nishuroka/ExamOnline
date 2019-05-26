@@ -7,6 +7,7 @@
         <th>Exam Date</th>
         <th>Exam Duration</th>
         <th>Total Marks</th>
+        <th>Status</th>
         <th colspan="3">Action</th>
     </thead>
     <tbody>
@@ -19,6 +20,7 @@
             <td>{!! $exam->exam_date !!}</td>
             <td>{!! $exam->exam_duration !!}</td>
             <td>{!! $exam->total_marks !!}</td>
+            <td>{!! $exam->status !!}</td>
             <td>
                 {!! Form::open(['route' => ['exams.destroy', $exam->id], 'method' => 'delete']) !!}
                 <div class='btn-group'>
