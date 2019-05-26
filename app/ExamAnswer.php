@@ -16,6 +16,7 @@ class ExamAnswer extends Model
         'user_id',
         'answer_review',
         'status',
+        'exam_given',
     ];
 
     public function examquestion(){

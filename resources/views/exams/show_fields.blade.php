@@ -46,6 +46,12 @@
     <p>{!! $exam->exam_duration !!}</p>
 </div>
 
+<!-- Exam Status Field -->
+<div class="form-group">
+    {!! Form::label('status', 'Status:') !!}
+    <p>{!! $exam->status !!}</p>
+</div>
+
 <!-- Total Marks Field -->
 <div class="form-group">
     {!! Form::label('total_marks', 'Total Marks:') !!}

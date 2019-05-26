@@ -75,30 +75,32 @@ class ExamController extends Controller
         $examquestion = examquestion::where('exam_id', $request->exam_id)->select('correct_answer')->get();
 
 
-      $correct_ans = null;
-      $marks = 0;
+        $correct_ans = null;
+        $marks = 0;
+        $exam_given = null;
 
-      if(!empty($examquestion)){
-      foreach($examquestion as $key => $q){
-            $key++;
-                if($q->correct_answer == $request->chosenValue[$key]){
-                        $correct_ans = 'Correct';
-                        $marks = $request->marks;
-                }else{
+        if (!empty($examquestion)) {
+            $exam_given = 1;
+            foreach ($examquestion as $key => $q) {
+                $key++;
+                if ($q->correct_answer == $request->chosenValue[$key]) {
+                    $correct_ans = 'Correct';
+                    $marks = $request->marks;
+                } else {
                     $correct_ans = 'In Correct';
                     $marks = 0;
                 }
-            $answers[] = [
-                'chosenValue' => $request->chosenValue[$key],
-                'question_id' => $request->question_id[$key],
-                'answer_review'=> $request->answer_review,
-                'user_id' => $request->user_id,
-                'answer' => $correct_ans,
-                'exam_id' => $request->exam_id,
-                'marks'=> $marks,
-                
-            ];
+                $answers[] = [
+                    'chosenValue' => $request->chosenValue[$key],
+                    'question_id' => $request->question_id[$key],
+                    'answer_review' => $request->answer_review,
+                    'user_id' => $request->user_id,
+                    'answer' => $correct_ans,
+                    'exam_id' => $request->exam_id,
+                    'marks' => $marks,
+                    'exam_given' => $exam_given,
 
+                ];
             }
         }
 

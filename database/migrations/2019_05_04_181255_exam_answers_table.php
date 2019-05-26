@@ -19,6 +19,8 @@ class ExamAnswersTable extends Migration
             $table->tinyInteger('exam_id');
             $table->string('chosenValue');
             $table->string('answer');
+            $table->string('answer_review');
+            $table->integer('exam_given')->nullable();
             $table->integer('status')->nullable();
             $table->integer('user_id')->unsigned();
             $table->timestamps();

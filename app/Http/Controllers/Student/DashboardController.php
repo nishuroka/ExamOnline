@@ -27,7 +27,8 @@ class DashboardController extends Controller
     public function exams($id){
         // dd('Hi');
         $subject = subject::find($id);
-        $exams = exam::all();
+        $exams = exam::where('status',1)->get();
+        // dd($exams->toArray());
         if (empty($subject)) {
             Flash::error('Exam not found');
 
@@ -41,15 +42,15 @@ class DashboardController extends Controller
     public function examQuestion(Request $request, $id){
         $user = Auth::guard('student')->user()->id;
         
-        $exam = ExamAnswer::where('exam_id',$id)->where('user_id',$user)->where('status',1)->with('examquestion')->get();
-        $examquestionss = ExamAnswer::where('exam_id',$id)->where('user_id',$user)->where('status',1)->pluck('question_id');
-        // dd($examquestionss);
+        // $exam = ExamAnswer::where('exam_id',$id)->where('user_id',$user)->where('status',1)->with('examquestion')->get();
+        $examquestionss = ExamAnswer::where('exam_id',$id)->where('user_id',$user)->where('status',1)->where('exam_given',1)->get();
+        // dd($examquestionss->toArray());
          
-        $examquestion = examquestion::where('id',$examquestionss)->where('exam_id',$id)->get();  
+        // $examquestion = examquestion::where('id',$examquestionss)->where('exam_id',$id)->get();  
         // dd($examquestion->toarray());
 
        
-        return view('student/PublishedResults/ExamAnswers/index',compact('exam','examquestion'));
+        return view('student/PublishedResults/ExamAnswers/index',compact('examquestionss'));
        
     }
 }

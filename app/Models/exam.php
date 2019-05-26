@@ -39,7 +39,8 @@ class exam extends Model
         'exam_date',
         'start_time',
         'exam_duration',
-        'total_marks'
+        'total_marks',
+        'status'
     ];
 
     /**

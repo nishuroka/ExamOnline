@@ -8,6 +8,7 @@
     </thead>
     <tbody>
         @forelse($subject->exams as $exam)
+        @if($exam->status == 1)
         <tr>
             <td>{{$exam->id}}</td>
             <td>{!! $exam->exam_name !!}</td>
@@ -20,6 +21,7 @@
                 {!! Form::close() !!}
             </td>
         </tr>
+        @endif
         @empty
         <p>No Exam Added</p>
         @endforelse

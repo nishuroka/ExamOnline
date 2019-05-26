@@ -28,18 +28,33 @@
     {!! Form::text('exam_date', null, ['class' => 'form-control','id'=>'exam_date']) !!}
 </div>
 
+<!-- Exam Start Time Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('start_time', 'Start Time:') !!}
+    {!! Form::text('start_time', null, ['class' => 'form-control','id'=>'start_time']) !!}
+</div>
+
+<div class="form-group col-sm-6">
+    <label for="status">Status</label>
+    <select name="status" class="col-md-12">
+        <option value="0">Inactive</option>
+        <option value="1">Active</option>
+    </select>
+</div>
+
+
 @section('scripts')
-   <script type="text/javascript">
-           $('#exam_date').datetimepicker({
-               format: 'YYYY-MM-DD HH:mm:ss',
-               useCurrent: true,
-               icons: {
-                   up: "icon-arrow-up-circle icons font-2xl",
-                   down: "icon-arrow-down-circle icons font-2xl"
-               },
-               sideBySide: true
-           })
-       </script>
+<script type="text/javascript">
+    $('#exam_date').datetimepicker({
+        format: 'YYYY-MM-DD HH:mm:ss',
+        useCurrent: true,
+        icons: {
+            up: "icon-arrow-up-circle icons font-2xl",
+            down: "icon-arrow-down-circle icons font-2xl"
+        },
+        sideBySide: true
+    })
+</script>
 @endsection
 
 

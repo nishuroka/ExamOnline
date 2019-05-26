@@ -6,19 +6,19 @@
         <th>Marks</th>
         <th>Answer</th>
         <th>Review</th>
-        
+
     </thead>
     <tbody>
-        @forelse($exam as $subject)
+        @forelse($examquestionss as $subject)
         <tr>
             <td>{!! $subject->id !!}</td>
             <td>{!! $subject->question_id !!}</td>
-          
+
             <td>{!! $subject->marks !!}</td>
             <td>{!! $subject->answer !!}</td>
             <td>{!! $subject->answer_review !!}</td>
 
-            
+
         </tr>
         @empty
         <p>Result hasn't been published yet.</p>

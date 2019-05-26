@@ -23,6 +23,7 @@ class CreateexamsTable extends Migration
             $table->text('start_time');
             $table->string('exam_duration');
             $table->string('total_marks');
+            $table->integer('status');
             $table->timestamps();
             $table->softDeletes();
             $table->foreign('subject_id')->references('id')->on('subjects');
